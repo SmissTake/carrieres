@@ -8,3 +8,5 @@ export const routerMine = express.Router({
 });
 
 routerMine.route('/mine/show/:id').get(mineController.read);
+routerMine.route('/mine/add').post(mineController.create);
+routerMine.route('/mine/update/:id').put(mineController.update);
