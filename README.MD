@@ -6,6 +6,9 @@ NODE JS EVALUATION PROJECT
 
 ```npm run install```
 
+Generate keys for JWT
+```npm run generate:keys```
+
 See instruction in .env.example file
 
 ## Run

@@ -5,6 +5,9 @@
   "scripts": {
     "start:dev": "nodemon dist/index.js",
     "build:dev": "tsc --watch --preserveWatchOutput",
+    "build:pk": "openssl genrsa -des3 -out private.pem 2048",
+    "build:pub": "openssl rsa -in private.pem -outform PEM -pubout -out public.pem",
+    "generate:keys": "concurrently \"npm run build:pk\" \"npm run build:pub\"",
     "dev": "concurrently \"npm run build:dev\" \"npm run start:dev\""
   },
   "keywords": [],
