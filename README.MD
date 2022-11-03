@@ -14,11 +14,11 @@ See instruction in .env.example file
 
 ## 1. Mine Information by id
 
-GET:[localhost:8400/mine/show/:id](localhost:8400/mine/show/1)
+GET:[http://localhost:8400/mine/show/:id](http://localhost:8400/mine/show/1)
 
 ## 2. Add a new mine
 
-POST:[localhost:8400/mine/add](localhost:8400/mine/add)
+POST:[http://localhost:8400/mine/add](http://localhost:8400/mine/add)
 
 Parameter: Body > raw > JSON
 ```
@@ -32,7 +32,7 @@ Parameter: Body > raw > JSON
 
 ## 3. Update a mine
 
-PUT:[localhost:8400/mine/update/:id](localhost:8400/mine/update/1)
+PUT:[http://localhost:8400/mine/update/:id](http://localhost:8400/mine/update/1)
 
 Parameter: Body > raw > JSON
 ```
@@ -48,19 +48,19 @@ Parameter: Body > raw > JSON
 
 ## 4. Delete a mine
 
-DELETE:[localhost:8400/mine/delete/:id](localhost:8400/mine/delete/1)
+DELETE:[http://localhost:8400/mine/delete/:id](http://localhost:8400/mine/delete/1)
 
 ## 5. Show all mines by concession
 
-GET:[localhost:8400/concession/show/mines/:id](localhost:8400/concession/show/mines/1)
+GET:[http://localhost:8400/concession/show/mines/:id](http://localhost:8400/concession/show/mines/1)
 
 ## 6. Show all contacts by concession
 
-GET:[localhost:8400/concession/show/contact/:id](localhost:8400/concession/show/contact/1)
+GET:[http://localhost:8400/concession/show/contact/:id](http://localhost:8400/concession/show/contact/1)
 
 ## 7. Show all informations by concession
 
-GET:[localhost:8400/concession/all/:id](localhost:8400/concession/all/1)
+GET:[http://localhost:8400/concession/all/:id](http://localhost:8400/concession/all/1)
 
 ## 8. Authentication for Create/Update/Delete
 
