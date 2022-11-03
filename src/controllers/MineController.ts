@@ -42,4 +42,24 @@ export class MineController extends CrudController{
             res.json({"message":"Modification impossible"});
         })
     }
+
+    public delete(req: Request, res: Response): void {
+        let id = req.params.id;
+
+        Mine.findByPk(id)
+        .then(mine => {
+            if (mine !== null){
+                mine.destroy();
+                res.json({"message":"Suppression effectué"});
+            }
+            else{
+                res.json({"message":"no mine with id : $(id)"})
+            }
+
+        })
+        .catch(err => {
+            console.log(err);
+            res.json({"message":"Suppression impossible"});
+        })
+    }
 }

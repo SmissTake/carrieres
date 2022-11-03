@@ -35,3 +35,7 @@ Parameter: Body > raw > JSON
 ```
 
 *Each parameter is optional*
+
+## 4. Delete a mine
+
+DELETE:[localhost:8200/mine/delete/:id](localhost:8200/mine/delete/1)
