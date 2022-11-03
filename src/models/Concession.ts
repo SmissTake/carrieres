@@ -30,7 +30,7 @@ Concession.init({
         },
         allowNull: false
     },
-    licence: {
+    license: {
         type: DataTypes.STRING,
         allowNull: false
     },
