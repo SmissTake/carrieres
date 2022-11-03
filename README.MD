@@ -50,14 +50,6 @@ Parameter: Body > raw > JSON
 
 DELETE:[localhost:8400/mine/delete/:id](localhost:8400/mine/delete/1)
 
-
-{
-    "firstname":"gwiondeux",
-    "lastname":"Tanguy",
-    "password":"admin",
-    "mail":"gwiontanguy+2@mail.com"
-}
-
 ## 5. Show all mines by concession
 
 GET:[localhost:8400/concession/show/mines/:id](localhost:8400/concession/show/mines/1)
