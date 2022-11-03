@@ -39,6 +39,7 @@ Concession.init({
         type: DataTypes.STRING,
         validate: {
             isNumeric: true,
+            max: 10,
         },
         allowNull: true
     },
