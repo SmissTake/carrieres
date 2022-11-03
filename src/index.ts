@@ -2,11 +2,12 @@ require('dotenv').config();
 
 import express from 'express';
 import { PORT } from './config/constants';
+import { routerMine } from './routes/mine';
 
 const app = express();
 app.use(express.json());
 
-app.get('/', (req, res) => res.send("hello world"));
+app.get('/mine/show/:id', routerMine);
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
