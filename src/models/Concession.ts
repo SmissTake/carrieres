@@ -1,6 +1,7 @@
 import {Model, DataTypes} from 'sequelize';
 import { sequelize } from '../config/database';
 import { Adresse } from './Adresse';
+import { Mine } from './Mine';
 
 export class Concession extends Model
 {

@@ -9,6 +9,7 @@ export const routerConcession = express.Router({
 
 routerConcession.route('/concession/show/:id').get(concessionController.read);
 routerConcession.route('/concession/show/mines/:id').get(concessionController.readMines);
+routerConcession.route('/concession/show/contact/:id').get(concessionController.readContacts);
 routerConcession.route('/concession/add').post(concessionController.create);
 routerConcession.route('/concession/update/:id').put(concessionController.update);
 routerConcession.route('/concession/delete/:id').delete(concessionController.delete);

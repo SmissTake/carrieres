@@ -51,5 +51,5 @@ Mine.init({
 }
 );
 
-Mine.belongsTo(Concession, {foreignKey: 'concessionsId'});
-Concession.hasOne(Mine, {foreignKey: 'id'});
+Concession.hasMany(Mine, {foreignKey: "concessionsId"});
+Mine.belongsTo(Concession, {foreignKey: "concessionsId"});

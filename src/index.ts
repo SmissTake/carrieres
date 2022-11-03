@@ -15,6 +15,7 @@ app.delete('/mine/delete/:id', routerMine);
 
 app.get('/concession/show/:id', routerConcession);
 app.get('/concession/show/mines/:id', routerConcession);
+app.get('/concession/show/contact/:id', routerConcession);
 app.post('/concession/add', routerConcession);
 app.put('/concession/update/:id', routerConcession);
 app.delete('/concession/delete/:id', routerConcession);

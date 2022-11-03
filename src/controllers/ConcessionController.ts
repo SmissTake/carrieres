@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import { Concession } from "../models/Concession";
+import { Contact } from "../models/Contact";
+import { Mine } from "../models/Mine";
 import { CrudController } from "./CrudController";
 
 export class ConcessionController extends CrudController{
@@ -13,7 +15,20 @@ export class ConcessionController extends CrudController{
     }
 
     public readMines(req: Request, res: Response): void{
-        Concession.findByPk(req.params.id, {include: ['Mine']})
+        Concession.findByPk(req.params.id, {attributes: {
+        exclude: ['id', 'name', 'siret', 'license', 'phone', 'adressesId']},
+        include: [Mine]})
+        .then((concession) => res.json(concession))
+        .catch(error => {
+            console.log(error)
+            res.send('no concession found');
+        });
+    }
+
+    public readContacts(req: Request, res: Response): void{
+        Concession.findByPk(req.params.id, {attributes: {
+        exclude: ['id', 'name', 'siret', 'license', 'phone', 'adressesId']},
+        include: [Contact]})
         .then((concession) => res.json(concession))
         .catch(error => {
             console.log(error)
