@@ -2,6 +2,16 @@
 
 NODE JS EVALUATION PROJECT
 
+## Installation
+
+```npm run install```
+
+See instruction in .env.example file
+
+## Run
+
+```npm run dev```
+
 ## 1. Mine Information by id
 
 GET:[localhost:8400/mine/show/:id](localhost:8400/mine/show/1)
