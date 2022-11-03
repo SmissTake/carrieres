@@ -36,6 +36,15 @@ export class ConcessionController extends CrudController{
         });
     }
 
+    public readAll(req: Request, res: Response): void{
+        Concession.findByPk(req.params.id, {include: [Contact, Mine]})
+        .then((concessions) => res.json(concessions))
+        .catch(error => {
+            console.log(error)
+            res.send('no concession found');
+        });
+    }
+
     public create(req: Request, res: Response): void {
         Concession.create(req.body)
         .then(concession => res.json(concession))
